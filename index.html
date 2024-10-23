@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tirelo Maile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
-          }
-        }
-      </script>
       <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <nav class="NavBar">
-            <ul class="nav-list">
-                <li><a href="">TK MAILE</a></li>
-                <li class="nav-list-item"><a href="">ABOUT ME</a></li>
-                <li class="nav-list-item"><a href=""> MY EXPERIENCE</a></li>
-                <li class="nav-list-item"><a href=""> MY PROJECTS</a></li>
-                <li class="nav-list-item"><a href="">CONTACTS</a></li>
+    <header class="NavBar">
+        <nav>
+            <ul class="sidebar">
+             <li onclick="hideSidebar()" class="menu-toggle"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+              <li><a href="#">About Me</a></li>
+              <li><a href=".">My Experience</a></li>
+              <li><a href="">My Projects</a></li>
+              <li><a href="">Cotacts</a></li>
+              
+            </ul>  
+          </nav>
+        <nav>
+            <ul>
+                <li><a href="">TK <span>MAILE</span></a></li>
+                <li class="hideOnDisplay"><a href="">ABOUT ME</a></li>
+                <li class="hideOnDisplay"><a href=""> MY EXPERIENCE</a></li>
+                <li class="hideOnDisplay"><a href=""> MY PROJECTS</a></li>
+                <li class="hideOnDisplay"><a href="">CONTACTS</a></li>
+                <li onclick="showSidebar()" class="menu-toggle"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
                 
             </ul>
         </nav>
     </header>
+    
+
+
+
+
+
+    <script src="index.js"></script>
 </body>
 </html>
