@@ -143,18 +143,22 @@ height: 100%;
  /*-- Introduction Section --*/
 
  /* -- Main section and the main container --*/
-.introduction {
+ .introduction {
     height: 100vh;
+    min-height: 100dvh; /* Use dynamic viewport height for mobile devices */
     background-color: var(--color-dark);
     width: 100%;
+    padding-top: 3rem; /* Prevent overlap with fixed navbar */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
 }
 
 .container {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin: 150px auto 0px;
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 
@@ -272,6 +276,12 @@ height: 100%;
  .profile-user-socials a:hover {
     color: var(--color-accent);
  }
+
+
+/*______________________________________________________________________________________________________________*/
+
+
+
 /* -- About Me Section --*/
 .about-me {
     padding: 20px;
@@ -333,6 +343,11 @@ height: 100%;
         text-align: left;
     }
 }
+
+
+/*_____________________________________________________________________________________________________________*/
+
+
 /* My Skills Section */
 .skills-section-container {
     display: grid;
@@ -345,6 +360,7 @@ height: 100%;
     padding: 20px;
     text-align: center;
     background-color: var(--color-accent);
+    height: 100vh;
 }
 .skills-subtitle {
     align-items: center;
