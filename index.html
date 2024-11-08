@@ -57,16 +57,15 @@
             <div class="profile-user-status">
                 <!--Pop up messages using animation-->
                 <div id="messages">
-                    <span class="status-span"></span>
+                    <span class="status-span">Front-End Dev</span>
                 </div>
             </div>
             <div class="profile-user-qualifications">
-                <button class="btn profile-user-ruseme-btn">Download Resume</button>
-                <button class="btn profile-user-contact-btn">Contact Info</button>
+                <button class="btn profile-user-ruseme-btn"> <a href="https://docs.google.com/document/d/1hcykoUP3M-uy-tp0R5DgSEHsCt1lyZ4ae4iHOhqigAM/edit?usp=sharing" target="_blank">Resume</a></button>
+                <button class="btn profile-user-contact-btn"><a href="#Contacts">Contact Info</a></button>
             </div>
     
             <div class="profile-user-socials">
-                <a href="" target="_blank"><i class='bx bxl-twitter'></i></a>
                 <a href="" target="_blank"><i class='bx bxl-github' ></i></a>
                 <a href="" target="_blank"><i class='bx bxl-linkedin' ></i></a>
             </div>
@@ -119,29 +118,58 @@
   <section class="My_Projects" id="My_Projects">
 
     <h2 class="projects-section-title">Projects</h2>
-    <div class="project-tile">
-        <h3>Memory Game</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam beatae, iste laborum saepe esse cumque placeat dignissimos quas ea, at quaerat delectus,
-             dolore assumenda est tenetur rem nemo libero tempora?</p>
-    </div> <!--Project tile number 1-->
-    <div class="project-tile">
-        <h3>Memory Game</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam beatae, iste laborum saepe esse cumque placeat dignissimos quas ea, at quaerat delectus,
-             dolore assumenda est tenetur rem nemo libero tempora?</p>
-    </div> <!--Project tile number 2-->
-    <div class="project-tile">
-        <h3>Memory Game</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam beatae, iste laborum saepe esse cumque placeat dignissimos quas ea, at quaerat delectus,
-             dolore assumenda est tenetur rem nemo libero tempora?</p>
-    </div> <!--Project tile number 3-->
-    <div class="project-tile">
-        <h3>Memory Game</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam beatae, iste laborum saepe esse cumque placeat dignissimos quas ea, at quaerat delectus,
-             dolore assumenda est tenetur rem nemo libero tempora?</p>
-    </div> <!--Project tile number 4-->
+    
+    <div class="project-tile-section">
 
-
+        <div class="project-tile">
+            <h3 class="project-tile-title">Memory Game</h3>
+            <p class="project-tile-desc">Lorem ipsum do</p>
+            <div class="project-tile-link">
+                <a href="" target="_blank">Live App</a>
+                <a href="" target="_blank">Repository</a>
+            </div>       
+        </div> <!--Project tile number 1-->
+        <div class="project-tile">
+            <h3 class="project-tile-title">Cache Bank App</h3>
+            <p class="project-tile-desc">Lorem ipsum do</p>
+            <div class="project-tile-link">
+                <a href="" target="_blank">Live App</a>
+                <a href="" target="_blank">Repository</a>
+            </div>       
+        </div> <!--Project tile number 2-->
+        <div class="project-tile">
+            <h3 class="project-tile-title">Agile Board</h3>
+            <p class="project-tile-desc">Lorem ipsum do</p>
+            <div class="project-tile-link">
+                <a href="" target="_blank">Live App</a>
+                <a href="" target="_blank">Repository</a>
+            </div>       
+        </div> <!--Project tile number 3-->
+       
+    </div>
   </section>
+
+  <section id="Contacts" class="contact-section">
+    <h2 class="contact-section-title">Contact Me</h2>
+    <p class=" contact-section-subtitle">I'd love to hear from you! Please reach out using the form below.</p>
+
+    <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+        <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="_replyto" required placeholder="Your email">
+        </div>
+
+        <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Your message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </div>
+    </form>
+</section>
 
     <script src="index.js"></script>
 </body>
