@@ -25,6 +25,11 @@
 
 }
 
+h1, h2, h3, h4, h5, h6 {
+    align-items: center;
+    justify-content: center;
+}
+
 @media (min-width: 800px) {
     :root {
     --fs-h1:  4rem;
@@ -37,7 +42,7 @@
 img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 /* --- BASIC STYLING --- */
@@ -47,6 +52,7 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-color: var(--color-dark);
 }
 
 html {
@@ -110,7 +116,7 @@ height: 100%;
      top: 0;
      right:0;
      height: 100vh;
-     width: 450px;
+     width: 650px;
      z-index: 999;
      background-color:var(--color-dark);
      display: none;
@@ -202,6 +208,12 @@ height: 100%;
         align-self: center;
     }
 }
+@media (min-width: 768px) {
+    .about-section-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
 
 /*-- Profile user --*/
 
@@ -281,164 +293,126 @@ height: 100%;
 /*______________________________________________________________________________________________________________*/
 
 
-
-/* -- About Me Section --*/
-.about-me {
-    padding: 20px;
-    text-align: center;
-}
-
-.about-section-title {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.about-section-text {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Container for Image and Description */
-.about-section-container {
+/*-- My Skills Section --*/
+/* Center the section */
+.Skills-Section {
     display: flex;
-    flex-direction: column; /* Stack on smaller screens */
+    flex-direction: column;
     align-items: center;
-}
-
-.about-section-image {
-    max-width: 100%;
-    margin-bottom: 20px;
-}
-
-.about-image {
-    width: 50%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.about-section-desc {
-    max-width: 600px;
-    font-size: 1em;
-    color: #444;
-    line-height: 1.6;
-    padding: 10px;
-}
-
-/* Responsive Layout */
-@media (min-width: 768px) {
-    .about-section-container {
-        flex-direction: row; /* Side-by-side on larger screens */
-        align-items: center;
-        gap: 20px; /* Space between image and text */
-    }
-    
-    .about-section-image, 
-    .about-section-desc {
-        flex: 1;
-    }
-    
-    .about-section-desc {
-        text-align: left;
-    }
-}
-
-
-/*_____________________________________________________________________________________________________________*/
-
-
-/* My Skills Section */
-.skills-section-container {
-    display: grid;
-    gap: 15px;
-    grid-template-columns: 1fr; /* Single column layout on small screens */
-    padding: 20px;
-    
-}
-.skills-section {
-    padding: 20px;
-    text-align: center;
-    background-color: var(--color-accent);
+    padding: 2rem 0;
+    background: var(--color-dark);
     height: 100vh;
+    min-height: 100dvh;
+    border-top: 2px solid var(--color-main);
+    border-bottom: 2px solid var(--color-main);
+
 }
-.skills-subtitle {
-    align-items: center;
-    justify-content: center;
+
+/* Center align the h2 and p tags */
+.skills-section-title,
+.skills-section-subtitle {
+    text-align: center;
     text-decoration: underline;
-    font-size: var(--fs-h3);
-    color: var(--color-dark);
+    color: var(--color-accent);
 }
-.skills-section-details {
-    padding: 10px;
-    text-align: center;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-    color: #333;
-}
-
-/* Responsive Grid Layout for Larger Screens */
-@media (min-width: 768px) {
-    .skills-section-container {
-        grid-template-columns: repeat(3, 1fr); /* Three items per row */
-    }
-}
-
-.skills-section-details {
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
 .skills-section-title {
-    font-size: var(--fs-h3);
-    color: var(--color-dark);
-    margin-bottom: 15px;
-    text-decoration: underline;
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
 }
-
-.skills-descriptions {
-    font-size: 1em;
-    color: #555;
-    margin-top: 15px;
-    line-height: 1.5;
-}
-
-/* Flex Styling for List */
-.skills-list {
+/* Center the Skills Section Container */
+.skills-section-container {
     display: flex;
-    gap: 10px; 
-    flex-wrap: wrap; /* Wrap items if they don’t fit in a single line */
-    list-style: none;
-    padding: 0;
-    justify-content: center; /* Center-align items */
-    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Adjust gap between skills */
+    max-width: 800px; /* Adjust as needed */
+    margin: 100px auto; /* Centers the container */
+   
 }
 
-/* Button-like Styling for List Items */
-.skills-list-items {
-    padding: 10px 20px;
-    background-color:var(--color-accent);
-    color:var(--color-dark);
-    font-size: 1em;
-    border: none;
+/* Style each skill */
+.skill {
+    padding: 1rem 1.5rem;
+    background-color: var(--color-light); /* Optional background for skills */
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
     text-align: center;
+    
+    /* You can also add additional styling as needed */
 }
 
-/* Hover Effect */
-.skills-list-items:hover {
-    background-color: var(--color-main);
+/*________________________________________________________________________________________________________________________________________*/
+
+/*--- About Me Section ---*/
+
+.section-title {
+    color: var(--color-accent);
+    margin-bottom: .25em;
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
 }
 
-.skills-list-items:active {
-    background-color: var(--color-accent);
+.section-subtitle-about {
+    background: var(--color-accent);
+    font-family: var(--ff-secondary);
+    padding: .25em 1em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
 }
+
+.section-subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.about-me-body{
+    font-size: var(--fs-h3);
+    font-weight: 900;
+    color: var(--color-light);
+}
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    margin-bottom: 30px;
+    
+   
+}
+.about-me-img {
+    box-shadow: var(--box-shadow);
+    height: 100%;
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+        "title img"
+        "subtitle img"
+        "text img";
+        grid-column-gap: 1.5em;
+
+    }
+    .section-title-about {
+        grid-area: title;
+    }
+    .section-subtitle-about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 3.5em);
+    }
+    .about-me-img {
+       grid-area: img;
+       position: relative;
+       z-index: 2;
+    }
+
+}
+
+
+
