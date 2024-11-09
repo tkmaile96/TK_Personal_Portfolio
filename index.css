@@ -17,7 +17,7 @@
     --color-main: #00ffff;
 
     --fs-h1: 3rem;
-    --fs-h2: 1.25rem;
+    --fs-h2: 1.75rem;
     --fs-h3: 1rem;
     --fs-body: 0.875rem;
 
@@ -26,28 +26,13 @@
 }
 
 section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     min-height: 100dvh;
     padding: 2rem;
 }
-.introduction,
-.Skills-Section,
-.about-me,
-.contact-section {
-    height: 100vh;
-    padding: 3rem;
-    display: flex;
+h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
-    text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    text-align: center;
 }
 a {
     text-decoration: none;
@@ -56,12 +41,12 @@ a {
 a:hover {
     color: var(--color-main);
 }
-@media (max-width: 600px) {
+@media (min-width: 800px) {
     :root {
-    --fs-h1:  2.25rem;
-    --fs-h2: 1.5rem;
-    --fs-h3: 0.875rem;
-    --fs-body: 0.75rem;
+    --fs-h1:  4rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
 
 }
 }
@@ -75,6 +60,9 @@ img {
 
 html, body {
     height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-dark);
 }
 
@@ -139,14 +127,13 @@ height: 100%;
      top: 0;
      right:0;
      height: 100vh;
-     width: 70vw;
+     width: 650px;
      z-index: 999;
      background-color:var(--color-dark);
      display: none;
      flex-direction: column;
      align-items: flex-start;
      justify-content: flex-start;
-     padding: 2rem;
  
  }
  
@@ -343,6 +330,9 @@ height: 100%;
     font-size: var(--fs-h1);
     font-weight: var(--fw-bold);
 }
+
+
+
 /* Center the Skills Section Container */
 .skills-section-container {
     display: flex;
@@ -352,11 +342,12 @@ height: 100%;
     max-width: 800px; /* Adjust as needed */
     margin: 100px auto; /* Centers the container */
    
+   
 }
 
 /* Style each skill */
 .skill {
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     background-color: var(--color-light); /* Optional background for skills */
     border-radius: 5px;
     text-align: center;
@@ -366,84 +357,65 @@ height: 100%;
 
 /*________________________________________________________________________________________________________________________________________*/
 
-/*--- About Me Section ---*/
-
-.section-title {
-    margin-bottom: .25em;
-    font-size: var(--fs-h1);
-    font-weight: var(--fw-bold);
+/* About Me Section */
+.about-me {
+    display: flex;
+    flex-direction: column-reverse; /* Stack vertically on smaller screens */
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--color-dark);
     color: var(--color-light);
+    text-align: center;
 }
 
-.section-subtitle-about {
-    background-color: var(--color-main);
+/* Content Styling */
+.about-me-content {
+    max-width: 800px;
+}
+
+.section-title {
+    font-size: 2rem;
     font-family: var(--ff-secondary);
-    padding: .25em 1em;
-    margin-bottom: 1em;
-    text-transform: uppercase;
-    
-   
+    color: var(--color-main);
+    margin-bottom: 1rem;
 }
 
 .section-subtitle {
-    margin: 0;
-    font-size: var(--fs-h3);
-   
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: 1rem;
 }
 
-.about-me-body{
-    font-size: var(--fs-h3);
-    font-weight: 900;
-    color: var(--color-light);
+.about-me-text {
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-.about-me {
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-top: 4rem;
-    margin-bottom: 30px;
-    
-   
-}
-.about-me-img {
-    box-shadow: var(--box-shadow);
-    height: 100%;
+/* Image Styling */
+.about-me-image {
+    width: 100%;
+    max-width: 250px; /* Limits the size on large screens */
+    margin-bottom: 1.5rem;
 }
 
-@media (min-width: 600px) {
-    .about-me {
-        display: grid;
-        grid-template-columns: 1fr 200px;
-        grid-template-areas: 
-        "title img"
-        "subtitle img"
-        "text img";
-        grid-column-gap: 1.5em;
+.about-me-image img {
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    border-radius: 10%; /* Makes the image circular */
+    border: 4px solid var(--color-main);
+    box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25);
+}
 
-    }
-    .section-title-about {
-        grid-area: title;
-    }
-    .section-subtitle-about {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        position: relative;
-        left: -1em;
-        width: calc(100% + 2em);
-        padding-left: 1em;
-        padding-right: calc(200px + 3.5em);
-    }
-    .about-me-img {
-       grid-area: img;
-       position: relative;
-       z-index: 2;
+/* Responsive Layout for Larger Screens */
+@media (min-width: 768px) {
+    .about-me-section {
+        flex-direction: row; /* Side-by-side layout on larger screens */
+        text-align: left;
     }
 
-}
-
-@media (max-width: 600px) {
-    .about-me-img {
-        display: none;
+    .about-me-content {
+        margin-right: 2rem;
     }
 }
 
@@ -568,7 +540,5 @@ height: 100%;
         flex-direction: column;
     }
 }
-
-
 
 
