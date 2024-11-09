@@ -25,11 +25,11 @@
 
 }
 
-section {
+/* section {
     height: 100vh;
     min-height: 100dvh;
     padding: 2rem;
-}
+} */
 h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
@@ -359,6 +359,8 @@ height: 100%;
 
 /* About Me Section */
 .about-me-section {
+    min-height: 100dvh;
+    height: 100vh;
     display: flex;
     flex-direction: column-reverse; /* Stack vertically on smaller screens */
     align-items: center;
@@ -400,7 +402,7 @@ height: 100%;
 
 .about-me-image img {
     width: 100%;
-    min-height: 150px;
+    min-height: 130px;
     height: auto;
     border-radius: 10%; /* Makes the image circular */
     border: 1px solid var(--color-main);
@@ -422,6 +424,11 @@ height: 100%;
 /*_____________________________________________________________________________________________________________________*/
 
 /*--- My Projects section ---*/
+
+.My_Projects {
+    min-height: 80dvh;
+    height: 80vh;
+}
 .projects-section-title {
     font-size: var(--fs-h1);
     font-weight: var(--fw-bold);
@@ -472,9 +479,11 @@ height: 100%;
 
 /*--- Contacts section ---*/
 .contact-section {
+    min-height: 60vh;
+    height: 60vh;
     background-color: var(--color-dark);
     padding: 2rem 1.4rem;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
 }
@@ -483,6 +492,7 @@ height: 100%;
     color: var(--color-light);
     font-size: var(--fs-h1);
     font-weight: var(--fw-bold);
+    margin-bottom: 1.3rem;
 }
 .contact-section-subtitle {
     color: var(--color-light);
